@@ -8,15 +8,12 @@ myApp.controller('LoginController', function ($scope, $http, $window, $interval,
 			return;
 		}
 
-
-
-
 		try {
 
 
 			$http({
 				method: 'POST',
-				url: "handler/authlogin.php?username=" + $scope.username + "&password=" + $scope.password
+				url: "handler/login.php?username=" + $scope.username + "&password=" + $scope.password
 			})
 
 				.then(
